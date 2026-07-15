@@ -1594,7 +1594,7 @@ async function loadSchedule() {
         any = true;
         const a = document.createElement('a');
         a.className = 'sc';
-        a.href = `https://vidcloud.eu.org/play.php?batch_id=${BATCH_ID}&subject_id=${SUBJECT_ID}&topic_id=${topicId}&video_id=${videoId}&video_name=${title}&video_img=&video_type=live&play_type=Lecture`;
+        a.href = `https://vidcloud.eu.org/play.php?batch_id=${BATCH_ID}&subject_id=${subjectId}&topic_id=${topicId}&video_id=${videoId}&video_name=${encodeURIComponent(title)}&video_img=&video_type=live&play_type=Lecture`;
         if (tagL === 'upcoming') {
           a.onclick = ev => {
             ev.preventDefault();
